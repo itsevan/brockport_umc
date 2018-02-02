@@ -5,15 +5,21 @@ $tertiary-color: #dddddd
 
 body
 	font-family: 'Montserrat', sans-serif
-	margin: 0
 	line-height: 2.5em
-figure
+h1, h2, h3, p, li, figure, body
 	margin: 0
 .hero
-	background: url('img/candlelight.jpg')
+	background: url('img/candlelight.jpg') no-repeat
+	background-size: 100%
 	color: $secondary-color
-h1, h2, h3, p, li
-	margin: 0
+	height: 39vw
+.hero__title
+	display: flex
+	h1
+		padding-top: 1.25em
+	figure img
+		height: 100px
+		float: left
 .mission_statement
 	background: $primary-color
 	width: 100%

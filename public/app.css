@@ -1,34 +1,46 @@
 /* line 6, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
 body {
   font-family: 'Montserrat', sans-serif;
-  margin: 0;
   line-height: 2.5em;
 }
 
-/* line 10, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
-figure {
+/* line 9, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+h1, h2, h3, p, li, figure, body {
   margin: 0;
 }
 
-/* line 12, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+/* line 11, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
 .hero {
-  background: url("img/candlelight.jpg");
+  background: url("img/candlelight.jpg") no-repeat;
+  background-size: 100%;
   color: #fdfdfd;
+  height: 39vw;
 }
 
-/* line 15, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
-h1, h2, h3, p, li {
-  margin: 0;
+/* line 16, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+.hero__title {
+  display: flex;
 }
 
-/* line 17, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+/* line 18, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+.hero__title h1 {
+  padding-top: 1.25em;
+}
+
+/* line 20, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+.hero__title figure img {
+  height: 100px;
+  float: left;
+}
+
+/* line 23, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
 .mission_statement {
   background: #225173;
   width: 100%;
   min-height: 15em;
 }
 
-/* line 21, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+/* line 27, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
 .mission_statement blockquote {
   padding: 5% 0;
   margin: auto;
@@ -38,22 +50,22 @@ h1, h2, h3, p, li {
   text-align: center;
 }
 
-/* line 28, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+/* line 34, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
 .pastor {
   background: #fdfdfd;
 }
 
-/* line 30, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+/* line 36, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
 .pastor .pastor__portrait {
   float: left;
 }
 
-/* line 32, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+/* line 38, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
 .pastor .pastor__description {
   line-height: 1.75em;
 }
 
-/* line 34, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+/* line 40, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
 .calendar {
   min-height: 500px;
   width: 100%;
@@ -61,7 +73,7 @@ h1, h2, h3, p, li {
   background: #dddddd;
 }
 
-/* line 39, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+/* line 45, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
 .calendar__calendar {
   height: 250px;
   width: 50%;
@@ -69,7 +81,7 @@ h1, h2, h3, p, li {
   margin: auto;
 }
 
-/* line 44, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+/* line 50, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
 footer {
   background: #225173;
   color: #fdfdfd;

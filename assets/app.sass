@@ -2,24 +2,50 @@ $primary-color: #225173
 $secondary-color: #fdfdfd
 $tertiary-color: #dddddd
 
+// 12 column layout calculator
+// @args [1-12]
+// i.e: left: column-position(2)
+
+@function column-position($column)
+	@return ($column / 12 * 100%)
 
 body
 	font-family: 'Montserrat', sans-serif
 	line-height: 2.5em
 h1, h2, h3, p, li, figure, body
 	margin: 0
+ul
+	margin: 0
 .hero
+	position: relative
 	background: url('img/candlelight.jpg') no-repeat
 	background-size: 100%
 	color: $secondary-color
 	height: 39vw
-.hero__title
-	display: flex
-	h1
-		padding-top: 1.25em
-	figure img
-		height: 100px
-		float: left
+	&__title
+		display: flex
+		position: absolute
+		top: 5%
+		left: column-position(2)
+		h1
+			padding-top: 1.25em
+		figure img
+			height: 100px
+			float: left
+	&__schedule
+		position: absolute
+		left: column-position(2)
+		bottom: 5%
+		display: flex
+		&__sessions
+			text-align: right
+			margin-right: 1em
+		&__times
+			font-weight: bold
+	&__address
+		position: absolute
+		right: column-position(2)
+		bottom: 5%
 .mission_statement
 	background: $primary-color
 	width: 100%
@@ -33,20 +59,49 @@ h1, h2, h3, p, li, figure, body
 		text-align: center
 .pastor
 	background: $secondary-color
-	.pastor__portrait
-		float: left
-	.pastor__description
-		line-height: 1.75em
+	min-height: 350px
+	padding: 5% column-position(1)
+	&__content
+		display: flex
+		&__portrait
+			float: left
+			width: 50%
+			img
+				width: 80%
+		&__description
+			position: relative
+			float: left
+			line-height: 1.75em
+			width: 40vw
+	&__title
+		text-align: center
 .calendar
 	min-height: 500px
 	width: 100%
-	padding-top: 10%
+	padding: 5% 0
 	background: $tertiary-color
-.calendar__calendar
-	height: 250px
-	width: 50%
-	background: lightgreen
-	margin: auto
-footer
+	&__embed
+		margin: auto
+.footer
 	background: $primary-color
 	color: $secondary-color
+	padding: 5% column-position(1)
+	display: flex
+	justify-content: space-between
+	section 
+		float: left
+		div
+			display: flex
+			ul
+				list-style-type: none
+				padding: 0
+				line-height: 1.5em
+				white-space: nowrap
+	&__contact_us, &__hours
+		div
+			ul
+				text-align: right
+				&:nth-child(2)
+					margin-left: 1em
+					font-weight: bold
+					text-align: left

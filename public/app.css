@@ -1,46 +1,81 @@
-/* line 6, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+/* line 12, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
 body {
   font-family: 'Montserrat', sans-serif;
   line-height: 2.5em;
 }
 
-/* line 9, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+/* line 15, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
 h1, h2, h3, p, li, figure, body {
   margin: 0;
 }
 
-/* line 11, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+/* line 17, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+ul {
+  margin: 0;
+}
+
+/* line 19, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
 .hero {
+  position: relative;
   background: url("img/candlelight.jpg") no-repeat;
   background-size: 100%;
   color: #fdfdfd;
   height: 39vw;
 }
 
-/* line 16, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+/* line 25, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
 .hero__title {
   display: flex;
+  position: absolute;
+  top: 5%;
+  left: 16.66667%;
 }
 
-/* line 18, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+/* line 30, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
 .hero__title h1 {
   padding-top: 1.25em;
 }
 
-/* line 20, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+/* line 32, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
 .hero__title figure img {
   height: 100px;
   float: left;
 }
 
-/* line 23, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+/* line 35, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+.hero__schedule {
+  position: absolute;
+  left: 16.66667%;
+  bottom: 5%;
+  display: flex;
+}
+
+/* line 40, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+.hero__schedule__sessions {
+  text-align: right;
+  margin-right: 1em;
+}
+
+/* line 43, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+.hero__schedule__times {
+  font-weight: bold;
+}
+
+/* line 45, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+.hero__address {
+  position: absolute;
+  right: 16.66667%;
+  bottom: 5%;
+}
+
+/* line 49, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
 .mission_statement {
   background: #225173;
   width: 100%;
   min-height: 15em;
 }
 
-/* line 27, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+/* line 53, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
 .mission_statement blockquote {
   padding: 5% 0;
   margin: auto;
@@ -50,41 +85,92 @@ h1, h2, h3, p, li, figure, body {
   text-align: center;
 }
 
-/* line 34, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+/* line 60, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
 .pastor {
   background: #fdfdfd;
+  min-height: 350px;
+  padding: 5% 8.33333%;
 }
 
-/* line 36, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
-.pastor .pastor__portrait {
+/* line 64, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+.pastor__content {
+  display: flex;
+}
+
+/* line 66, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+.pastor__content__portrait {
   float: left;
+  width: 50%;
 }
 
-/* line 38, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
-.pastor .pastor__description {
+/* line 69, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+.pastor__content__portrait img {
+  width: 80%;
+}
+
+/* line 71, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+.pastor__content__description {
+  position: relative;
+  float: left;
   line-height: 1.75em;
+  width: 40vw;
 }
 
-/* line 40, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+/* line 76, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+.pastor__title {
+  text-align: center;
+}
+
+/* line 78, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
 .calendar {
   min-height: 500px;
   width: 100%;
-  padding-top: 10%;
+  padding: 5% 0;
   background: #dddddd;
 }
 
-/* line 45, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
-.calendar__calendar {
-  height: 250px;
-  width: 50%;
-  background: lightgreen;
+/* line 83, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+.calendar__embed {
   margin: auto;
 }
 
-/* line 50, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
-footer {
+/* line 85, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+.footer {
   background: #225173;
   color: #fdfdfd;
+  padding: 5% 8.33333%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 91, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+.footer section {
+  float: left;
+}
+
+/* line 93, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+.footer section div {
+  display: flex;
+}
+
+/* line 95, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+.footer section div ul {
+  list-style-type: none;
+  padding: 0;
+  line-height: 1.5em;
+  white-space: nowrap;
+}
+
+/* line 102, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+.footer__contact_us div ul, .footer__hours div ul {
+  text-align: right;
+}
+
+/* line 104, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+.footer__contact_us div ul:nth-child(2), .footer__hours div ul:nth-child(2) {
+  margin-left: 1em;
+  font-weight: bold;
+  text-align: left;
 }
 
 /*# sourceMappingURL=../public/app.map */

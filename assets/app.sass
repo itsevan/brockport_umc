@@ -9,6 +9,17 @@ $tertiary-color: #dddddd
 @function column-position($column)
 	@return ($column / 12 * 100%)
 
+@mixin breakpoint($class)
+	@if ($class == large)
+		@media (max-width: 1250px)
+			@content
+	@if ($class == medium)
+		@media (max-width: 950px)
+			@content
+	@if ($class == small)
+		@media (max-width: 600px)
+			@content
+
 body
 	font-family: 'Montserrat', sans-serif
 	line-height: 2.5em
@@ -19,12 +30,15 @@ ul
 .hero
 	position: relative
 	background: url('img/candlelight.jpg') no-repeat
-	background-size: 100%
+	background-size: cover
 	color: $secondary-color
-	height: 39vw
+	height: 35vw
+	@include breakpoint(medium)
+		height: 30vw
+		min-height: 350px
 	&__title
-		display: flex
 		position: absolute
+		display: flex
 		top: 5%
 		left: column-position(2)
 		h1
@@ -32,20 +46,26 @@ ul
 		figure img
 			height: 100px
 			float: left
-	&__schedule
+	&__info
 		position: absolute
-		left: column-position(2)
-		bottom: 5%
 		display: flex
-		&__sessions
-			text-align: right
-			margin-right: 1em
-		&__times
-			font-weight: bold
-	&__address
-		position: absolute
-		right: column-position(2)
+		@include breakpoint(medium)
+			flex-wrap: wrap
+		justify-content: space-around
 		bottom: 5%
+		left: 0px
+		width: 100%
+		&__schedule
+			float: left
+			display: flex
+			@include breakpoint(medium)
+			&__sessions
+				text-align: right
+				margin-right: 1em
+			&__times
+				font-weight: bold
+		&__address
+			float: left
 .mission_statement
 	background: $primary-color
 	width: 100%
@@ -63,16 +83,23 @@ ul
 	padding: 5% column-position(1)
 	&__content
 		display: flex
+		flex-wrap: wrap
+		justify-content: center
 		&__portrait
 			float: left
-			width: 50%
+			margin-right: 2em
 			img
-				width: 80%
+				max-height: 500px
+			@include breakpoint(large)
+				margin-right: 0
 		&__description
 			position: relative
 			float: left
 			line-height: 1.75em
-			width: 40vw
+			text-indent: 2em
+			width: column-position(6)
+			@include breakpoint(large)
+				width: 100%
 	&__title
 		text-align: center
 .calendar
@@ -85,23 +112,28 @@ ul
 .footer
 	background: $primary-color
 	color: $secondary-color
-	padding: 5% column-position(1)
-	display: flex
-	justify-content: space-between
-	section 
-		float: left
+	padding: 2em 0
+	min-height: 200px
+	justify-content: center
+	div
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		@include breakpoint(medium)
+			justify-content: flex-start
+	section
+		margin: 1.5em column-position(1)/2
+		@include breakpoint(medium)
+			width: 40%
+		@include breakpoint(small)
+			width: 100%
 		div
-			display: flex
 			ul
 				list-style-type: none
 				padding: 0
 				line-height: 1.5em
 				white-space: nowrap
 	&__contact_us, &__hours
-		div
-			ul
-				text-align: right
-				&:nth-child(2)
-					margin-left: 1em
-					font-weight: bold
-					text-align: left
+		li
+			&:nth-child(odd)
+				font-weight: bold

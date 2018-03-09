@@ -107,8 +107,12 @@ ul
 	width: 100%
 	padding: 5% 0
 	background: $tertiary-color
+	&__title
+		text-align: center
 	&__embed
-		margin: auto
+		display: flex
+		justify-content: center
+		
 .footer
 	background: $primary-color
 	color: $secondary-color
@@ -137,3 +141,5 @@ ul
 		li
 			&:nth-child(odd)
 				font-weight: bold
+			&:nth-child(even)
+				margin-bottom: .5em

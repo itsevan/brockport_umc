@@ -168,11 +168,17 @@ ul {
 }
 
 /* line 110, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
-.calendar__embed {
-  margin: auto;
+.calendar__title {
+  text-align: center;
 }
 
 /* line 112, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+.calendar__embed {
+  display: flex;
+  justify-content: center;
+}
+
+/* line 116, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
 .footer {
   background: #225173;
   color: #fdfdfd;
@@ -181,7 +187,7 @@ ul {
   justify-content: center;
 }
 
-/* line 118, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+/* line 122, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
 .footer div {
   display: flex;
   flex-wrap: wrap;
@@ -189,32 +195,32 @@ ul {
 }
 
 @media (max-width: 950px) {
-  /* line 118, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+  /* line 122, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
   .footer div {
     justify-content: flex-start;
   }
 }
 
-/* line 124, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+/* line 128, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
 .footer section {
   margin: 1.5em 4.16667%;
 }
 
 @media (max-width: 950px) {
-  /* line 124, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+  /* line 128, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
   .footer section {
     width: 40%;
   }
 }
 
 @media (max-width: 600px) {
-  /* line 124, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+  /* line 128, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
   .footer section {
     width: 100%;
   }
 }
 
-/* line 131, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+/* line 135, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
 .footer section div ul {
   list-style-type: none;
   padding: 0;
@@ -222,9 +228,14 @@ ul {
   white-space: nowrap;
 }
 
-/* line 138, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+/* line 142, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
 .footer__contact_us li:nth-child(odd), .footer__hours li:nth-child(odd) {
   font-weight: bold;
+}
+
+/* line 144, C:/Users/Evan/Sites/brockport_umc/assets/app.sass */
+.footer__contact_us li:nth-child(even), .footer__hours li:nth-child(even) {
+  margin-bottom: .5em;
 }
 
 /*# sourceMappingURL=../public/app.map */
